@@ -5,6 +5,7 @@
 #  been deployed
 #
 # Parameters:
+#   $max_buffer_size: Global line limit for playback buffer size per channel.
 #   $auth_type: (plain|sasl). Will determine to use local auth or SASL auth.
 #   $ssl: (true|false). To enable or disable SSL support. Will autogen a SSL certificate.
 #   $port: port to run ZNC on.
@@ -29,6 +30,7 @@
 # Sample Usage:
 #  This module should not be called directly.
 class znc::config (
+  $max_buffer_size,
   $auth_type           = undef,
   $ssl                 = undef,
   $ssl_source          = undef,

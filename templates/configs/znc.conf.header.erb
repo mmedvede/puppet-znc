@@ -18,7 +18,7 @@ LoadModule = <%= global_module %>
 <% if @auth_type == 'sasl' -%>
 LoadModule = saslauth saslauthd
 <% end -%>
-MaxBufferSize = 500
+MaxBufferSize = <%= @max_buffer_size %>
 <% if @motd -%>
 Motd = <%= @motd %>
 <% end -%>

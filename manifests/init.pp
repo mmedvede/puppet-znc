@@ -56,6 +56,7 @@ class znc(
   $ipv6                = $::znc::params::zc_ipv6,
   $port                = $::znc::params::zc_port,
   $systemd             = $::znc::params::systemd,
+  $max_buffer_size     = $::znc::params::max_buffer_size,
 
   $znc_admin_user      = undef,
   $znc_admin_pass      = undef,
@@ -88,6 +89,7 @@ class znc(
       ipv6                => $ipv6,
       port                => $port,
       systemd             => $systemd,
+      max_buffer_size     => $max_buffer_size,
     }
       # we need to define at least one user in order to start service
   -> ::znc::user { $znc_admin_user :

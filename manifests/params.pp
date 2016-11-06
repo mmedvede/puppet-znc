@@ -50,6 +50,8 @@ class znc::params {
     }
   }
 
+  $max_buffer_size = 500
+
 # server definition
   $zc_user       = 'znc'
   $zc_group      = 'znc'
